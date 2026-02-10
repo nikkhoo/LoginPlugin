@@ -1,0 +1,23 @@
+name: LoginPlugin
+version: 1.0.0
+main: com.example.loginplugin.LoginPlugin
+description: A secure login plugin for Paper servers with MySQL database
+authors:
+  - YourName
+website: https://github.com/yourusername/LoginPlugin
+
+commands:
+  login:
+    description: Login to your account
+    usage: /login <password>
+  register:
+    description: Register a new account
+    usage: /register <password> <confirm-password>
+  logout:
+    description: Logout from your account
+    usage: /logout
+
+permissions:
+  loginplugin.use:
+    description: Allows players to use login commands
+    default: true
