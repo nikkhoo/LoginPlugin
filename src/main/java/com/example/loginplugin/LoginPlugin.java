@@ -6,12 +6,14 @@ import com.example.loginplugin.listeners.PlayerQuitListener;
 import com.example.loginplugin.commands.LoginCommand;
 import com.example.loginplugin.commands.RegisterCommand;
 import com.example.loginplugin.commands.LogoutCommand;
+import com.example.loginplugin.util.TimeBarManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class LoginPlugin extends JavaPlugin {
 
     private static LoginPlugin instance;
     private DatabaseManager databaseManager;
+    private TimeBarManager timeBarManager;
 
     @Override
     public void onEnable() {
@@ -34,6 +36,10 @@ public class LoginPlugin extends JavaPlugin {
         }
 
         // Register listeners
+        timeBarManager = new TimeBarManager(this);
+        timeBarManager.start();
+
+        // Register listeners
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(this), this);
         getServer().getPluginManager().registerEvents(new PlayerQuitListener(this), this);
 
@@ -50,6 +56,9 @@ public class LoginPlugin extends JavaPlugin {
         if (databaseManager != null) {
             databaseManager.disconnect();
         }
+        if (timeBarManager != null) {
+            timeBarManager.stop();
+        }
         getLogger().info("✓ LoginPlugin disabled!");
     }
 
@@ -59,5 +68,9 @@ public class LoginPlugin extends JavaPlugin {
 
     public DatabaseManager getDatabaseManager() {
         return databaseManager;
+    }
+
+    public TimeBarManager getTimeBarManager() {
+        return timeBarManager;
     }
 }

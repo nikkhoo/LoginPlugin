@@ -4,7 +4,7 @@
   <groupId>com.example</groupId>
   <artifactId>LoginPlugin</artifactId>
   <name>LoginPlugin</name>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <description>A secure login plugin for Paper servers with MySQL database</description>
   <build>
     <plugins>
@@ -69,7 +69,9 @@
   </dependencies>
   <properties>
     <maven.compiler.target>17</maven.compiler.target>
+    <dailyPlaytimeLimit.enabled>true</dailyPlaytimeLimit.enabled>
     <maven.compiler.source>17</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <dailyPlaytimeLimit.description>Feature to limit daily playtime for users.</dailyPlaytimeLimit.description>
   </properties>
 </project>

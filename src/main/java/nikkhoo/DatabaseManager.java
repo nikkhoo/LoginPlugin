@@ -1,4 +1,5 @@
 // Updated DatabaseManager.java to add playtime tracking columns
+import java.sql.Timestamp;
 
 // Assuming the existing class starts here
 public class DatabaseManager {

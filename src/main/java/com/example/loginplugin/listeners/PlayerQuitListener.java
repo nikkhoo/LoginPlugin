@@ -23,6 +23,8 @@ public class PlayerQuitListener implements Listener {
     public void onPlayerQuit(PlayerQuitEvent event) {
         Player player = event.getPlayer();
 
+        plugin.getTimeBarManager().stopForPlayer(player);
+
         plugin.getServer().getScheduler().runTaskAsynchronously(plugin, () -> {
             try {
                 playerManager.setLoggedIn(player.getUniqueId(), false);

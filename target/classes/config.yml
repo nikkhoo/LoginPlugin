@@ -14,3 +14,12 @@ plugin:
   require-login: true
   # Kick player if not logged in after X seconds (0 = disabled)
   kick-timeout: 300
+
+  # Boss bar timer shown when player joins
+  time-bar:
+    enabled: true
+    # Duration in seconds
+    duration: 60
+    title: "§eSession timer: §c%time%s"
+    color: YELLOW
+    style: SOLID

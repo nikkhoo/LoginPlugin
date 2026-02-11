@@ -23,6 +23,8 @@ public class PlayerJoinListener implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
 
+        plugin.getTimeBarManager().startForPlayer(player);
+
         plugin.getServer().getScheduler().runTaskAsynchronously(plugin, () -> {
             try {
                 if (!playerManager.playerExists(player.getUniqueId())) {
