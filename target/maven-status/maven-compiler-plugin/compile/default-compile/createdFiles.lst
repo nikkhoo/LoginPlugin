@@ -1,0 +1,9 @@
+com\example\loginplugin\listeners\PlayerQuitListener.class
+com\example\loginplugin\util\PasswordUtil.class
+com\example\loginplugin\commands\LogoutCommand.class
+com\example\loginplugin\commands\LoginCommand.class
+com\example\loginplugin\commands\RegisterCommand.class
+com\example\loginplugin\database\PlayerManager.class
+com\example\loginplugin\listeners\PlayerJoinListener.class
+com\example\loginplugin\database\DatabaseManager.class
+com\example\loginplugin\LoginPlugin.class
