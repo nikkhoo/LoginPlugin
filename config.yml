@@ -1,0 +1,8 @@
+daily-playtime-limit: 3600
+reset-hour: 0
+kick-on-expire: true
+warning-messages:
+  - time: 300
+    message: "You have 5 minutes remaining."
+  - time: 60
+    message: "You have 1 minute remaining."
