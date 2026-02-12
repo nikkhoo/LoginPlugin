@@ -17,6 +17,14 @@ commands:
     description: Logout from your account
     usage: /logout
 
+  show:
+    description: Show the timer bar
+    usage: /show
+  hide:
+    description: Hide the timer bar
+    usage: /hide
+
+
 permissions:
   loginplugin.use:
     description: Allows players to use login commands

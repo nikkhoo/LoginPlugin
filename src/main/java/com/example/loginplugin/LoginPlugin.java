@@ -6,6 +6,8 @@ import com.example.loginplugin.listeners.PlayerQuitListener;
 import com.example.loginplugin.commands.LoginCommand;
 import com.example.loginplugin.commands.RegisterCommand;
 import com.example.loginplugin.commands.LogoutCommand;
+import com.example.loginplugin.commands.HideCommand;
+import com.example.loginplugin.commands.ShowCommand;
 import com.example.loginplugin.util.TimeBarManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -47,6 +49,8 @@ public class LoginPlugin extends JavaPlugin {
         getCommand("login").setExecutor(new LoginCommand(this));
         getCommand("register").setExecutor(new RegisterCommand(this));
         getCommand("logout").setExecutor(new LogoutCommand(this));
+        getCommand("show").setExecutor(new ShowCommand(this));
+        getCommand("hide").setExecutor(new HideCommand(this));
 
         getLogger().info("✓ LoginPlugin enabled!");
     }
